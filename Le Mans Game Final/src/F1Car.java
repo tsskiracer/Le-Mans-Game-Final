@@ -3,7 +3,7 @@ public class F1Car extends Car{
 	public F1Car()
 	{
 		name = "Formula One Car";
-		String[] localvUp = {"Turbo", "Weight Reduction", "Drag Reduction", "Suspension"};
+		String[] localvUp = {"Turbo", "Weight Reduction", "KERS", "Hybrid System"};
 		vUp = localvUp;
 		speed = 1;
 		fuelAmt = 100;

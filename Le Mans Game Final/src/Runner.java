@@ -15,14 +15,32 @@ public class Runner {
 	public static void startUp()
 	{
 		System.out.println("Hello and Welcome to the Game of Le Mans.");
-		System.out.println("How many players will be playing today?");
+		System.out.println("How many players will be playing today? (Up to 4)");
 		int numPlayers=davisIsAJerk.nextInt();
+		
+		while(true)
+		{
+			
+			if(numPlayers <= 0 || numPlayers >= 4)
+				System.out.println("Please enter a valid number");
+			else
+				break;
+		}
 		System.out.println();
 		System.out.println("And how many laps would you like to do?");
 		numLaps=davisIsAJerk.nextInt();
+		
+		while(true)
+		{
+			
+			if(numLaps <= 0)
+				System.out.println("Please enter a valid number");
+			else
+				break;
+		}
 		System.out.println();
 		ArrayList<Car> cars = new ArrayList<Car>();
-		cars.add(new DeltaWing());
+		cars.add(new P919H());
 		cars.add(new F1Car());
 		for (int i=0; i<numPlayers; i++)
 			{
@@ -32,7 +50,15 @@ public class Runner {
 					System.out.println(x + ". " + car);
 					x++;
 				}
-				int choice = davisIsAJerk.nextInt() - 1;
+				int choice;
+				while(true)
+				{
+					choice = davisIsAJerk.nextInt() - 1;
+					if(choice < 0 || choice >= (x))
+						System.out.println("Please enter a valid number");
+					else
+						break;
+				}
 				players.add(cars.get(choice));
 				cars.remove(choice);
 			}

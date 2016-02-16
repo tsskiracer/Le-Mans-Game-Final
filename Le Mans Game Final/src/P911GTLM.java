@@ -1,9 +1,8 @@
 
-public class DeltaWing extends Car {
-	
-	public DeltaWing()
+public class P911GTLM extends Car{
+	public P911GTLM()
 	{
-		name = "Nissan Deltawing";
+		name = "Porsche 911 GTLM Class";
 		String[] localvUp = {"Turbo", "Weight Reduction", "Drag Reduction", "Suspension"};
 		vUp = localvUp;
 		speed = 1;
@@ -12,5 +11,4 @@ public class DeltaWing extends Car {
 		position = 0;
 		laps = 0;
 	}
-	
 }
